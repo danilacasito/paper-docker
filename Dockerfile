@@ -9,8 +9,8 @@ RUN cd /server
 RUN wget https://papermc.io/api/v1/paper/1.16.3/238/download
 RUN mv download server.jar
 RUN cd ..
-RUN wget https://github.com/danilacasito/paper-docker/raw/latest/init.sh /init.sh
-RUN wget https://github.com/danilacasito/paper-docker/raw/latest/start.tar /start.tar
+RUN wget -o /init.sh https://github.com/danilacasito/paper-docker/raw/latest/init.sh 
+RUN wget -o /start.tar https://github.com/danilacasito/paper-docker/raw/latest/start.tar 
 RUN mkdir /start
 RUN tar -xvf start.tar /start/
 RUN chmod 777 /init.sh
